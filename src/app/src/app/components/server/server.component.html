@@ -1,0 +1,21 @@
+<input [(ngModel)]="name" />
+<p>{{ name }}</p>
+<button (click)="resetName()" [disabled]="!name">Reset</button>
+<hr />
+<button
+  (click)="visible = !visible"
+  (click)="clickCounter()"
+  [disabled]="!name"
+>
+  Display Details
+</button>
+<p *ngIf="visible">Secret password=tuna</p>
+<hr />
+
+<p
+  [ngStyle]="item > 5 ? { 'background-color': 'blue' } : {}"
+  [ngClass]="{ whiteText: item > 5 }"
+  *ngFor="let item of clickNumbers"
+>
+  hi!!
+</p>
